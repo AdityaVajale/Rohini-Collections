@@ -3,8 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
+
+
 
 /* COLOR THEME (SOFT + LIGHT) */
 :root {
@@ -13,7 +15,7 @@
   --secondary: #ffe9e9; /* soft pink */
   --accent: #e6f7ff;    /* light blue */
   --text: #222;
-  --light-text: #666;
+  --light-text: #000000;
 }
 
 /* BODY */
@@ -305,4 +307,20 @@ body.dark .btn {
 html {
   scroll-behavior: smooth;
 }
-
+ /*  ---------------------------------Whatsup float Css-------------------- */
+.wa-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  background:#25D366;
+  color:white;
+  font-size:24px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
