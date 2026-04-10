@@ -205,7 +205,7 @@ body.dark .footer a {
 
 /* 🌙 DARK MODE */
 body.dark {
-  background: linear-gradient(135deg, #000000, #000000, #050505);
+  background: linear-gradient(135deg, #1a1a1a, #282828, #000000);
   color: #e6f0ff;
 }
 
@@ -219,7 +219,7 @@ body.dark .container {
 }
 
 body.dark .card {
-  background: #4f4f4f;
+  background: #222121;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
