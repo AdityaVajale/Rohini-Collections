@@ -205,26 +205,26 @@ body.dark .footer a {
 
 /* 🌙 DARK MODE */
 body.dark {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #000000, #000000, #050505);
   color: #e6f0ff;
 }
 
 body.dark .navbar {
-  background: rgba(0, 30, 60, 0.7);
-  border-bottom: 1px solid #1e3a5f;
+  background: rgba(39, 39, 39, 0.7);
+  border-bottom: 1px solid #282a2d;
 }
 
 body.dark .container {
-  background: rgba(0, 40, 80, 0.5);
+  background: rgba(16, 16, 16, 0.82);
 }
 
 body.dark .card {
-  background: #162a3a;
+  background: #4f4f4f;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
 body.dark .footer {
-  background: #0f1f2e;
+  background: #000000;
 }
 
 body.dark .nav-links a {
@@ -237,6 +237,12 @@ body.dark .nav-links a:hover {
 
 body.dark .footer a {
   color: #cce6ff;
+}
+body.dark .footer a:hover {
+  color: #1d86e9;
+}
+body.dark .footer p{
+color: whitesmoke;
 }
 
 body.dark .btn {
