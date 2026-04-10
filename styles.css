@@ -219,7 +219,7 @@ body.dark .container {
 }
 
 body.dark .card {
-  background: #222121;
+  background:  rgba(101, 101, 101, 0.82);;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
