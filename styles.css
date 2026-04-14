@@ -61,9 +61,12 @@ body {
 
 .hero h1 {
   font-size: 40px;
+color: #ffefd5; 
+border-color: goldenrod;
 }
 
 .hero p {
+  font-size: medium;
   margin-top: 10px;
   color: white;
 }
