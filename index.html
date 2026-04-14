@@ -32,9 +32,15 @@
   <div id="home" class="hero"
     style="position:relative; height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white; overflow:hidden;">
 
-    <img src="images/hero.jpeg"
-      style="pointer-events:none; position:absolute; width:100%; height:100%; object-fit:cover; top:0; left:0; z-index:-2;"
-      alt="Saree Banner">
+    <!-- SLIDER IMAGES -->
+    <img src="images/hero1.jpeg" class="hero-slide" style="position:absolute; width:100%; height:100%; object-fit:cover; top:0; left:0; z-index:-2; opacity:1; transition:opacity 1s;">
+    <img src="images/hero2.jpeg" class="hero-slide" style="position:absolute; width:100%; height:100%; object-fit:cover; top:0; left:0; z-index:-2; opacity:0; transition:opacity 1s;">
+    <img src="images/hero4.jpeg" class="hero-slide" style="position:absolute; width:100%; height:100%; object-fit:cover; top:0; left:0; z-index:-2; opacity:0; transition:opacity 1s;">
+
+    <!-- SLIDER BUTTONS -->
+    <button onclick="prevSlide()" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; padding:10px 15px; font-size:18px; border-radius:50%; cursor:pointer; z-index:2;">❮</button>
+
+    <button onclick="nextSlide()" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; padding:10px 15px; font-size:18px; border-radius:50%; cursor:pointer; z-index:2;">❯</button>
 
     <div
       style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:-1; pointer-events:none;">
@@ -63,7 +69,7 @@
       ✨ Our Collection
     </h2>
 
-    <div class="grid scroll-collection">
+    <div class="grid">
 
       <div class="card">
         <img src="images/saree1.jpeg" class="zoom-img">
@@ -114,9 +120,9 @@
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
 
-      <iframe src="https://www.instagram.com/reel/DUxgLK0DPZK/embed" width="100%" height="400"></iframe>
-      <iframe src="https://www.instagram.com/reel/DUzkzvniAsR/embed" width="100%" height="400"></iframe>
-      <iframe src="https://www.instagram.com/reel/DU-tJggjJm5/embed" width="100%" height="400"></iframe>
+      <iframe src="https://www.instagram.com/reel/DUxgLK0DPZK/embed" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+      <iframe src="https://www.instagram.com/reel/DUzkzvniAsR/embed" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+      <iframe src="https://www.instagram.com/reel/DU-tJggjJm5/embed" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
 
     </div>
   </div>
@@ -183,8 +189,27 @@ document.querySelectorAll('.zoom-img').forEach(img=>{
 document.getElementById('imgModal').onclick = ()=>{
   document.getElementById('imgModal').style.display='none';
 };
-</script>
+// HERO SLIDER
+let slides = document.querySelectorAll('.hero-slide');
+let index = 0;
 
+function showSlide(i){
+  slides.forEach(s => s.style.opacity = 0);
+  slides[i].style.opacity = 1;
+}
+
+function nextSlide(){
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prevSlide(){
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+
+setInterva
+</script>
 
 </body>
 </html>
